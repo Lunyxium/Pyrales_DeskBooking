@@ -1,0 +1,22 @@
+{
+  "2025-06-13_klein_1": {
+    "user_id": "DELETED_USER",
+    "booking_type": "full_day",
+    "created_at": "2025-06-13T22:46:49.411892",
+    "date": "2025-06-13",
+    "room": "klein",
+    "desk_num": 1,
+    "archived_username": "Matt",
+    "archived_at": "2025-06-14T23:44:46.844706",
+    "original_user_id": "de42b22d"
+  },
+  "2025-06-25_klein_2": {
+    "user_id": "4b1bfdea",
+    "booking_type": "full_day",
+    "created_at": "2025-06-18T11:41:59.152691",
+    "date": "2025-06-25",
+    "room": "klein",
+    "desk_num": 2,
+    "entry_type": "desk_booking"
+  }
+}

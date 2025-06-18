@@ -1,0 +1,1176 @@
+/*
+BIIS Desk Booking System - Stylesheet (GORGEOUS USER SELECTION EDITION)
+Author: Mathias Bäumli
+Date: 2024-2025
+Description: Complete styling with GORGEOUS compact user selection
+
+GORGEOUS FEATURES ADDED:
+- Beautiful centered user selection under week navigation
+- "Klein und süss" styling throughout
+- Compact half-width controls
+- Stylish mini-title design
+- Perfect spacing and alignment
+- Sidebar compact user selection
+
+INDEX:
+1. GLOBAL STYLES & LAYOUT
+2. HEADER & BRANDING
+3. NAVIGATION & CONTROLS
+4. GORGEOUS USER SELECTION (NEW!)
+5. DESK COMPONENTS
+6. FORMS & DIALOGS (ORGANIZED & CLEANED)
+7. SIDEBAR & INTERFACE
+8. RESPONSIVE & UTILITIES
+*/
+
+/* ============================================================================
+   1. GLOBAL STYLES & LAYOUT
+   ============================================================================ */
+
+.stApp {
+    background-color: #5a5a5a;
+}
+
+.css-1d391kg {
+    background-color: #3a3a3a;
+}
+
+.main .block-container {
+    padding-top: 0.2rem;
+    padding-bottom: 2rem;
+    max-width: 1200px;
+}
+
+/* Typography */
+h1, h2, h3 {
+    color: #ffffff;
+    font-weight: 700;
+    font-family: 'Arial Black', Arial, sans-serif;
+}
+
+h1 { font-size: 2.2rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+h2 { font-size: 1.6rem; color: #4c80c1; }
+h3 { font-size: 1.3rem; color: #66b446; }
+
+/* Consolidated markdown styling */
+.stMarkdown,
+.css-1d391kg .stMarkdown {
+    color: #ffffff;
+}
+
+/* ============================================================================
+   2. HEADER & BRANDING
+   ============================================================================ */
+
+.header-container {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 20px !important;
+    margin: 0 auto !important;
+    width: fit-content !important;
+}
+
+.logo-container img {
+    width: 90px !important;
+    height: 90px !important;
+    vertical-align: middle !important;
+}
+
+.main-title {
+    font-size: 2.8rem !important;
+    background: linear-gradient(135deg, #4c80c1, #66b446) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    font-weight: 900 !important;
+    letter-spacing: 2px !important;
+    margin: 0 !important;
+    line-height: 90px !important;
+    white-space: nowrap !important;
+}
+
+/* Team News */
+.team-news-container {
+    background: linear-gradient(135deg, #484848, #3a3a3a);
+    border: 3px solid #4c80c1;
+    border-radius: 6px;
+    padding: 1rem;
+    margin: 0.5rem auto;
+    max-width: 800px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+.team-news-header {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #66b446;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.team-news-content {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #ffffff;
+    line-height: 1.3;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    min-height: 1.8rem;
+}
+
+/* ============================================================================
+   3. NAVIGATION & CONTROLS
+   ============================================================================ */
+
+/* Week Navigation Buttons */
+.stButton > button {
+    background-color: #6a6a6a !important;
+    color: #ffffff !important;
+    border: 1px solid #7a7a7a !important;
+    border-radius: 6px !important;
+    font-weight: 500 !important;
+    padding: 0.5rem 1rem !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.3px !important;
+    font-size: 0.8rem !important;
+    white-space: nowrap !important;
+}
+
+.stButton > button:hover {
+    background-color: #7a7a7a !important;
+    border-color: #8a8a8a !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15) !important;
+}
+
+/* Primary Buttons */
+button[kind="primary"] {
+    background: linear-gradient(135deg, #66b446, #5a9f39) !important;
+    border-color: #66b446 !important;
+}
+
+button[kind="primary"]:hover {
+    background: linear-gradient(135deg, #7bc857, #66b446) !important;
+    border-color: #7bc857 !important;
+}
+
+/* Tabs */
+.centered-tabs {
+    display: flex;
+    justify-content: center;
+    margin: 1rem auto;
+}
+
+.stTabs [data-baseweb="tab-list"] {
+    gap: 0.5rem;
+    background-color: #484848;
+    border-radius: 6px;
+    padding: 0.7rem;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.stTabs [data-baseweb="tab"] {
+    background-color: #5a5a5a;
+    color: #ffffff;
+    border-radius: 4px;
+    padding: 1.2rem 2.5rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    min-width: 130px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stTabs [data-baseweb="tab"]:hover {
+    background-color: #4c80c1;
+    border-color: #66b446;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(76, 128, 193, 0.3);
+}
+
+.stTabs [aria-selected="true"] {
+    background: linear-gradient(135deg, #4c80c1, #66b446) !important;
+    color: #ffffff !important;
+    border-color: #66b446 !important;
+    box-shadow: 0 4px 12px rgba(76, 128, 193, 0.4);
+    transform: translateY(-1px);
+}
+
+/* ============================================================================
+   4. GORGEOUS USER SELECTION - CLEANED UP
+   ============================================================================ */
+
+/* Right-side user selection dropdowns - SIMPLIFIED */
+div[key^="session_user_select_right_tab_"] > div > div {
+    background: rgba(72, 72, 72, 0.95) !important;
+    border: 2px solid rgba(102, 180, 70, 0.6) !important;
+    border-radius: 6px !important;
+    color: #ffffff !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    padding: 4px 8px !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2) !important;
+    text-align: center !important;
+    /* Width will be controlled inline for flexibility */
+}
+
+div[key^="session_user_select_right_tab_"] > div > div:hover {
+    border-color: #66b446 !important;
+    box-shadow: 0 5px 15px rgba(102, 180, 70, 0.3) !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Sidebar dropdown - unchanged */
+div[key="sidebar_user_select"] > div > div {
+    background: rgba(72, 72, 72, 0.9) !important;
+    border: 2px solid rgba(76, 128, 193, 0.5) !important;
+    border-radius: 6px !important;
+    font-size: 12px !important;
+    padding: 6px 10px !important;
+    color: #ffffff !important;
+    max-width: 130px !important;
+    margin: 0 auto !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15) !important;
+}
+
+div[key="sidebar_user_select"] > div > div:hover {
+    border-color: #66b446 !important;
+    box-shadow: 0 3px 12px rgba(102, 180, 70, 0.25) !important;
+}
+
+/* Mobile responsive for gorgeous user selection */
+@media (max-width: 768px) {
+    .gorgeous-user-selection-unified {
+        max-width: 95%;
+        margin: 0.8rem auto;
+    }
+
+    .user-selection-title-integrated {
+        font-size: 1rem;
+        padding: 0.6rem 0.8rem;
+    }
+
+    .user-selection-dropdown-container {
+        padding: 0.8rem;
+    }
+
+    .gorgeous-user-selection-unified .stSelectbox > div > div {
+        font-size: 12px !important;
+        padding: 8px 12px !important;
+    }
+}
+
+/* ============================================================================
+   5. DESK COMPONENTS
+   ============================================================================ */
+
+/* Office Layout Header */
+.office-layout-header-standalone {
+    background: linear-gradient(135deg, #4c80c1, #66b446);
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem 2rem;
+    margin: 1rem auto 2rem auto;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(76, 128, 193, 0.3);
+    max-width: 400px;
+    position: relative;
+}
+
+.office-layout-header-standalone::before {
+    content: '';
+    position: absolute;
+    top: -2px; left: -2px; right: -2px; bottom: -2px;
+    background: linear-gradient(135deg, #66b446, #4c80c1);
+    border-radius: 10px;
+    z-index: -1;
+}
+
+/* Room Containers - FIXED: No double borders */
+div[data-testid="stVerticalBlock"]:has(.klein-title) {
+    background: linear-gradient(135deg, rgba(102, 180, 70, 0.15), rgba(90, 159, 57, 0.1)) !important;
+    border: 3px solid #66b446 !important;
+    border-radius: 8px !important;
+    padding: 1.5rem !important;
+    margin: 0.5rem !important;
+    box-shadow: 0 4px 15px rgba(102, 180, 70, 0.3) !important;
+    min-height: 220px !important;
+    transition: all 0.3s ease !important;
+}
+
+div[data-testid="stVerticalBlock"]:has(.gross-title) {
+    background: linear-gradient(135deg, rgba(76, 128, 193, 0.15), rgba(61, 107, 163, 0.1)) !important;
+    border: 3px solid #4c80c1 !important;
+    border-radius: 8px !important;
+    padding: 1.5rem !important;
+    margin: 0.5rem !important;
+    box-shadow: 0 4px 15px rgba(76, 128, 193, 0.3) !important;
+    min-height: 220px !important;
+    transition: all 0.3s ease !important;
+}
+
+/* Room Titles - SEAMLESS integration with containers */
+.room-title {
+    text-align: center;
+    padding: 0.8rem;
+    margin: -1.5rem -1.5rem 1.5rem -1.5rem;  /* FIXED: Match container padding */
+    border-radius: 8px 8px 0 0;  /* FIXED: Match container border-radius */
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: none;  /* REMOVED: No extra shadow */
+    color: #ffffff;
+    border: none;  /* REMOVED: No border separation */
+}
+
+/* REMOVE DOUBLE CONTAINERS - CRITICAL FIXES */
+div[data-testid="stVerticalBlock"]:has(.klein-title) > div[data-testid="stVerticalBlockBorderWrapper"],
+div[data-testid="stVerticalBlock"]:has(.gross-title) > div[data-testid="stVerticalBlockBorderWrapper"] {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    outline: none !important;
+}
+
+div[data-testid="stVerticalBlock"]:has(.room-title) > div[data-testid="stVerticalBlockBorderWrapper"] {
+    display: contents !important;
+}
+
+div[data-testid="stVerticalBlock"]:has(.klein-title) > div[data-testid="stVerticalBlockBorderWrapper"] > div.stVerticalBlock,
+div[data-testid="stVerticalBlock"]:has(.gross-title) > div[data-testid="stVerticalBlockBorderWrapper"] > div.stVerticalBlock {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* HIDE ROOM BLOCKER BUTTONS - They're now in sidebar */
+button[key*="block_klein_"],
+button[key*="block_gross_"] {
+    display: none !important;
+}
+
+.klein-title {
+    background: linear-gradient(135deg, #66b446, #5a9f39);
+}
+
+.gross-title {
+    background: linear-gradient(135deg, #4c80c1, #3d6ba3);
+}
+
+/* Room Block Message Styling */
+.room-block-message {
+    background: linear-gradient(135deg, rgba(198, 102, 102, 0.2), rgba(184, 85, 85, 0.1));
+    border: 2px solid #c66666;
+    border-radius: 6px;
+    padding: 0.8rem;
+    margin: 0.5rem 0 1rem 0;
+    color: #ffffff;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(198, 102, 102, 0.3);
+    font-size: 0.9rem;
+}
+
+/* Desk Containers */
+.desk-container {
+    background-color: #484848;
+    border: 2px solid #6a6a6a;
+    border-radius: 6px;
+    padding: 0.4rem;
+    margin: 0.3rem auto;
+    color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+    text-align: center;
+    max-width: 120px;
+    min-height: 80px;
+    outline: 1px solid #999999;
+    animation: fadeIn 0.3s ease-in-out;
+    position: relative !important;
+}
+
+.desk-container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.desk-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.2rem;
+}
+
+.desk-number {
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.desk-status {
+    font-size: 0.75rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 0.3rem;
+}
+
+/* Desk Status Styles */
+.desk-free {
+    background: linear-gradient(135deg, #66b446, #5a9f39);
+    border: 2px solid #66b446;
+    color: #ffffff;
+    box-shadow: 0 3px 8px rgba(102, 180, 70, 0.3);
+}
+
+.desk-booked {
+    background: linear-gradient(135deg, #c66666, #b85555);
+    border: 2px solid #c66666;
+    color: #ffffff;
+    box-shadow: 0 3px 8px rgba(198, 102, 102, 0.3);
+}
+
+.desk-maybe {
+    background: linear-gradient(135deg, #c6a166, #b89155);
+    border: 2px solid #c6a166;
+    color: #ffffff;
+    font-style: italic;
+    box-shadow: 0 3px 8px rgba(198, 161, 102, 0.3);
+}
+
+.desk-half-am {
+    background: linear-gradient(135deg, #4c80c1, #3d6ba3);
+    border: 2px solid #4c80c1;
+    color: #ffffff;
+    box-shadow: 0 3px 8px rgba(76, 128, 193, 0.3);
+}
+
+.desk-half-pm {
+    background: linear-gradient(135deg, #8c4cc1, #7d3db3);
+    border: 2px solid #8c4cc1;
+    color: #ffffff;
+    box-shadow: 0 3px 8px rgba(140, 76, 193, 0.3);
+}
+
+/* Status icon overlay - positioned in bottom-right corner */
+.desk-status-icon-overlay {
+    position: absolute !important;
+    bottom: -15px !important;
+    right: -15px !important;
+    width: 30px !important;
+    height: 30px !important;
+    z-index: 10 !important;
+    border: none !important;
+    background: none !important;
+    font-size: 20px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Desk Buttons */
+div[data-testid="stButton"] {
+    display: flex !important;
+    justify-content: center !important;
+    margin: 0.3rem 0 !important;
+}
+
+div[data-testid="stButton"] > button {
+    outline: 2px solid #cccccc !important;
+    border: none !important;
+    padding: 0.7rem 1.5rem !important;
+    margin: 0 !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    border-radius: 50px !important;
+    background: #4c80c1 !important;
+    color: #ffffff !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 2px 8px rgba(76, 128, 193, 0.3) !important;
+    cursor: pointer !important;
+    width: auto !important;
+    min-width: 80px !important;
+}
+
+div[data-testid="stButton"] > button:hover {
+    background: #66b446 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(102, 180, 70, 0.4) !important;
+    outline-color: #66b446 !important;
+}
+
+/* Confirmation dialog buttons */
+div[data-testid="stButton"]:has(button[key*="no_"]),
+div[data-testid="stButton"]:has(button[key*="yes_"]) {
+    display: inline-block !important;
+    width: auto !important;
+    margin: 5px !important;
+    vertical-align: top !important;
+}
+
+div[data-testid="stButton"] > button[key*="no_"],
+div[data-testid="stButton"] > button[key*="yes_"] {
+    padding: 6px 16px !important;
+    font-size: 11px !important;
+    min-width: 60px !important;
+    height: 32px !important;
+    margin: 0 !important;
+    border-radius: 4px !important;
+    font-weight: 600 !important;
+}
+
+/* ============================================================================
+   6. FORMS & DIALOGS (ORGANIZED & CLEANED)
+   ============================================================================ */
+
+/* Basic Form Elements */
+.stSelectbox > div > div,
+.stTextInput > div > div > input,
+.stTextArea > div > div > textarea {
+    background-color: #484848;
+    border: 2px solid #4c80c1;
+    color: #ffffff;
+    border-radius: 8px;
+}
+
+.stFileUploader > div {
+    background-color: #484848;
+    border: 2px solid #66b446;
+    color: #ffffff;
+    border-radius: 8px;
+}
+
+/* Dialog Container Styling */
+div[data-testid="stModal"] {
+    background-color: rgba(0, 0, 0, 0.85) !important;
+}
+
+div[data-testid="stModal"] > div {
+    background: linear-gradient(135deg, #484848, #3a3a3a) !important;
+    border: 3px solid #4c80c1 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.7) !important;
+    color: #ffffff !important;
+    max-width: 600px !important;
+    width: 90% !important;
+    margin: 2rem auto !important;
+    padding: 2rem !important;
+    animation: modalSlideIn 0.3s ease-out !important;
+}
+
+div[data-testid="stModal"] h1 {
+    color: #ffffff !important;
+    border-bottom: 2px solid #66b446 !important;
+    padding-bottom: 1rem !important;
+    margin-bottom: 1.5rem !important;
+    font-size: 1.8rem !important;
+}
+
+/* ============================================================================
+   DIALOG BUTTON SYSTEM - ORGANIZED & DOCUMENTED
+   ============================================================================ */
+
+/*
+TEMPLATE DIALOG BUTTONS - Small and compact for space efficiency
+These buttons appear in template management dialogs and need to be small
+to fit multiple options without overwhelming the interface
+*/
+div[data-testid="stDialog"] .stButton > button {
+    height: 22px !important;
+    font-size: 9px !important;
+    padding: 3px 6px !important;
+    border-radius: 4px !important;
+    font-weight: 600 !important;
+    line-height: 1.0 !important;
+}
+
+/*
+DELETE CONFIRMATION BUTTONS - Extra small (60% size) for safety
+These yes/no buttons for template deletion are intentionally tiny
+to prevent accidental clicks and require deliberate action
+*/
+div[data-testid="stModal"] button[key*="yes_delete_"],
+div[data-testid="stModal"] button[key*="no_delete_"] {
+    height: 19px !important;        /* 60% of standard size */
+    font-size: 7px !important;      /* Extra small text */
+    padding: 2px 4px !important;    /* Minimal padding */
+    border-radius: 3px !important;
+    font-weight: 600 !important;
+    line-height: 1.0 !important;
+}
+
+/*
+NAVIGATION BUTTONS - Blue-gray color for clear distinction
+Back and Cancel buttons use blue-gray to distinguish from action buttons
+Only affects template dialog navigation, not other interface elements
+*/
+div[data-testid="stModal"] button[key*="back_"],
+div[data-testid="stModal"] button[key*="cancel_"],
+div[data-testid="stModal"] button[key*="close_"] {
+    background: #5a7799 !important;  /* Blue-gray for navigation */
+    color: white !important;
+}
+
+/* Keep hover effects as default for navigation buttons */
+div[data-testid="stModal"] button[key*="back_"]:hover,
+div[data-testid="stModal"] button[key*="cancel_"]:hover,
+div[data-testid="stModal"] button[key*="close_"]:hover {
+    background: #6a87a9 !important;  /* Lighter blue-gray on hover */
+}
+
+/*
+GENERAL DIALOG BUTTON BASE STYLES
+Applied to all dialog buttons as foundation, then overridden by specific rules above
+*/
+div[data-testid="stModal"] button[key*="dialog_"],
+div[data-testid="stModal"] button[key*="save_"],
+div[data-testid="stModal"] button[key*="update_"],
+div[data-testid="stModal"] button[key*="delete_"],
+div[data-testid="stModal"] button[key*="clear_"],
+div[data-testid="stModal"] button[key*="final_"],
+div[data-testid="stModal"] button[key*="cancel_"],
+div[data-testid="stModal"] button[key*="no_"],
+div[data-testid="stModal"] button[key*="yes_"],
+div[data-testid="stModal"] button[key*="close_"],
+div[data-testid="stModal"] button[key*="reset_"],
+div[data-testid="stModal"] button[key*="add_"],
+div[data-testid="stModal"] button[key*="create_"],
+div[data-testid="stModal"] button[key*="confirm_"],
+div[data-testid="stModal"] button[key*="template_"],
+div[data-testid="stModal"] button[key*="back_"],
+div[data-testid="stModal"] button[key*="apply_"],
+div[data-testid="stModal"] button[key*="success_"],
+div[data-testid="stModal"] button[key*="next_"] {
+    all: unset !important;
+    background: white !important;
+    color: #222 !important;
+    border-radius: 4px !important;
+    height: 24px !important;
+    padding: 4px 8px !important;
+    margin: 0.3rem 0 !important;
+    font-weight: 600 !important;
+    font-family: 'Arial', sans-serif !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 100ms ease !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2) !important;
+    font-size: 9px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    min-width: auto !important;
+    border: none !important;
+    outline: none !important;
+    line-height: 1.0 !important;
+}
+
+/* Dialog Button Hover States */
+div[data-testid="stModal"] button[key*="dialog_"]:hover,
+div[data-testid="stModal"] button[key*="save_"]:hover,
+div[data-testid="stModal"] button[key*="update_"]:hover,
+div[data-testid="stModal"] button[key*="delete_"]:hover,
+div[data-testid="stModal"] button[key*="clear_"]:hover,
+div[data-testid="stModal"] button[key*="final_"]:hover,
+div[data-testid="stModal"] button[key*="cancel_"]:hover,
+div[data-testid="stModal"] button[key*="no_"]:hover,
+div[data-testid="stModal"] button[key*="yes_"]:hover,
+div[data-testid="stModal"] button[key*="close_"]:hover,
+div[data-testid="stModal"] button[key*="reset_"]:hover,
+div[data-testid="stModal"] button[key*="add_"]:hover,
+div[data-testid="stModal"] button[key*="create_"]:hover,
+div[data-testid="stModal"] button[key*="confirm_"]:hover,
+div[data-testid="stModal"] button[key*="template_"]:hover,
+div[data-testid="stModal"] button[key*="back_"]:hover,
+div[data-testid="stModal"] button[key*="apply_"]:hover,
+div[data-testid="stModal"] button[key*="success_"]:hover,
+div[data-testid="stModal"] button[key*="next_"]:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25) !important;
+    background-color: #f5f5f5 !important;
+}
+
+/* Dialog Button Active States */
+div[data-testid="stModal"] button[key*="dialog_"]:active,
+div[data-testid="stModal"] button[key*="save_"]:active,
+div[data-testid="stModal"] button[key*="update_"]:active,
+div[data-testid="stModal"] button[key*="delete_"]:active,
+div[data-testid="stModal"] button[key*="clear_"]:active,
+div[data-testid="stModal"] button[key*="final_"]:active,
+div[data-testid="stModal"] button[key*="cancel_"]:active,
+div[data-testid="stModal"] button[key*="no_"]:active,
+div[data-testid="stModal"] button[key*="yes_"]:active,
+div[data-testid="stModal"] button[key*="close_"]:active,
+div[data-testid="stModal"] button[key*="reset_"]:active,
+div[data-testid="stModal"] button[key*="add_"]:active,
+div[data-testid="stModal"] button[key*="create_"]:active,
+div[data-testid="stModal"] button[key*="confirm_"]:active,
+div[data-testid="stModal"] button[key*="template_"]:active,
+div[data-testid="stModal"] button[key*="back_"]:active,
+div[data-testid="stModal"] button[key*="apply_"]:active,
+div[data-testid="stModal"] button[key*="success_"]:active,
+div[data-testid="stModal"] button[key*="next_"]:active {
+    scale: 0.98 !important;
+    background: #333 !important;
+    color: white !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3) !important;
+}
+
+/*
+PRIMARY ACTION BUTTONS - Green for positive actions
+Save, Create, Apply, Confirm buttons use green to indicate positive actions
+*/
+div[data-testid="stModal"] button[key*="create_"],
+div[data-testid="stModal"] button[key*="confirm_"],
+div[data-testid="stModal"] button[key*="save_"],
+div[data-testid="stModal"] button[key*="update_"],
+div[data-testid="stModal"] button[key*="add_"],
+div[data-testid="stModal"] button[key*="yes_"],
+div[data-testid="stModal"] button[key*="apply_"],
+div[data-testid="stModal"] button[key*="success_"],
+div[data-testid="stModal"] button[key*="next_"] {
+    background: #66b446 !important;
+    color: white !important;
+}
+
+div[data-testid="stModal"] button[key*="create_"]:hover,
+div[data-testid="stModal"] button[key*="confirm_"]:hover,
+div[data-testid="stModal"] button[key*="save_"]:hover,
+div[data-testid="stModal"] button[key*="update_"]:hover,
+div[data-testid="stModal"] button[key*="add_"]:hover,
+div[data-testid="stModal"] button[key*="yes_"]:hover,
+div[data-testid="stModal"] button[key*="apply_"]:hover,
+div[data-testid="stModal"] button[key*="success_"]:hover,
+div[data-testid="stModal"] button[key*="next_"]:hover {
+    background: #7bc857 !important;
+    color: white !important;
+}
+
+/*
+DANGER BUTTONS - Red for destructive actions
+Delete and similar destructive actions use red for clear warning
+*/
+div[data-testid="stModal"] button[key*="delete_"],
+div[data-testid="stModal"] button[key*="clear_"],
+div[data-testid="stModal"] button[key*="final_delete"],
+div[data-testid="stModal"] button[key*="reset_"],
+div[data-testid="stModal"] button[key*="no_"] {
+    background: #c66666 !important;
+    color: white !important;
+}
+
+div[data-testid="stModal"] button[key*="delete_"]:hover,
+div[data-testid="stModal"] button[key*="clear_"]:hover,
+div[data-testid="stModal"] button[key*="final_delete"]:hover,
+div[data-testid="stModal"] button[key*="reset_"]:hover,
+div[data-testid="stModal"] button[key*="no_"]:hover {
+    background: #d77777 !important;
+    color: white !important;
+}
+
+/*
+PRESERVE INPUT FIELDS - Keep normal readable size
+Inputs, dropdowns, and text areas maintain standard size for usability
+This ensures dialog content remains readable while buttons are compact
+*/
+div[data-testid="stModal"] .stSelectbox,
+div[data-testid="stModal"] .stTextInput,
+div[data-testid="stModal"] .stTextArea,
+div[data-testid="stModal"] .stRadio,
+div[data-testid="stModal"] .stCheckbox {
+    font-size: 14px !important;
+}
+
+div[data-testid="stModal"] .stTextInput > div > div > input {
+    font-size: 14px !important;
+    padding: 8px 12px !important;
+    height: auto !important;
+    min-height: 40px !important;
+}
+
+div[data-testid="stModal"] .stSelectbox > div > div {
+    font-size: 14px !important;
+    height: auto !important;
+    min-height: 40px !important;
+}
+
+div[data-testid="stModal"] .stTextArea > div > div > textarea {
+    font-size: 14px !important;
+    padding: 8px 12px !important;
+}
+
+div[data-testid="stModal"] .stRadio > div {
+    font-size: 14px !important;
+}
+
+div[data-testid="stModal"] .stCheckbox > div {
+    font-size: 14px !important;
+}
+
+/* Template Dialog Specific Optimizations */
+div[data-testid="stModal"] .stMarkdown {
+    font-size: 14px !important;
+}
+
+div[data-testid="stModal"] .stMarkdown h1,
+div[data-testid="stModal"] .stMarkdown h2,
+div[data-testid="stModal"] .stMarkdown h3,
+div[data-testid="stModal"] .stMarkdown h4 {
+    font-size: inherit !important;
+}
+
+/* Better spacing for confirmation buttons */
+div[data-testid="stModal"] .stColumn {
+    padding: 0 5px !important;
+}
+
+div[data-testid="stModal"] .stColumn > div {
+    margin: 0 !important;
+}
+
+/* Info Boxes */
+.stInfo {
+    background-color: #484848 !important;
+    border: 2px solid #4c80c1 !important;
+    border-radius: 6px !important;
+    color: #ffffff !important;
+}
+
+.stSuccess {
+    background-color: #484848 !important;
+    border: 2px solid #66b446 !important;
+    border-radius: 6px !important;
+    color: #ffffff !important;
+}
+
+.stError {
+    background-color: #484848 !important;
+    border: 2px solid #c66666 !important;
+    border-radius: 6px !important;
+    color: #ffffff !important;
+}
+
+.stWarning {
+    background-color: #484848 !important;
+    border: 2px solid #c6a166 !important;
+    border-radius: 6px !important;
+    color: #ffffff !important;
+}
+
+/* ============================================================================
+   7. SIDEBAR & INTERFACE
+   ============================================================================ */
+
+/* SIMPLE BUT EFFECTIVE SIDEBAR BUTTON - LESS IS MORE! */
+button[data-testid="collapsedControl"] {
+    width: 120px !important;           /* 3x bigger */
+    height: 45px !important;           /* 3x bigger */
+    background: #66b446 !important;    /* Our green */
+    border: 2px solid #5a9f39 !important;
+    border-radius: 8px !important;
+    color: white !important;
+    font-size: 14px !important;
+    font-weight: bold !important;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    margin: 10px !important;
+
+    /* Simple glow */
+    box-shadow: 0 0 15px rgba(102, 180, 70, 0.6) !important;
+    transition: all 0.3s ease !important;
+}
+
+button[data-testid="collapsedControl"]:hover {
+    background: #7bc857 !important;
+    box-shadow: 0 0 25px rgba(102, 180, 70, 0.8) !important;
+    transform: scale(1.05) !important;
+}
+
+/* Add "MENU" text */
+button[data-testid="collapsedControl"]::before {
+    content: "MENU" !important;
+    font-size: 12px !important;
+    font-weight: bold !important;
+    color: white !important;
+}
+
+/* Hide original icon */
+button[data-testid="collapsedControl"] svg {
+    display: none !important;
+}
+
+/* GORGEOUS COMPACT SIDEBAR USER SELECTION */
+.sidebar-user-selection {
+    background: linear-gradient(135deg, rgba(76, 128, 193, 0.1), rgba(102, 180, 70, 0.08));
+    border: 1px solid rgba(76, 128, 193, 0.3);
+    border-radius: 8px;
+    padding: 0.8rem 0.6rem;
+    margin: 0 0 1.2rem 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.sidebar-user-title {
+    color: #4c80c1;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Compact dropdown for sidebar */
+.sidebar-user-selection .stSelectbox > div > div {
+    background: rgba(72, 72, 72, 0.8) !important;
+    border: 1px solid rgba(76, 128, 193, 0.4) !important;
+    border-radius: 6px !important;
+    font-size: 11px !important;
+    padding: 4px 8px !important;
+    color: #ffffff !important;
+    min-height: 28px !important;
+}
+
+/* Toggle Switches */
+.toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0;
+    padding: 8px 12px;
+    background-color: rgba(255,255,255,0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.1);
+    width: 100%;
+}
+
+.toggle-label {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 14px;
+    margin: 0;
+}
+
+.toggle-status {
+    font-size: 12px;
+    margin-left: 8px;
+    opacity: 0.8;
+}
+
+div[data-testid="stCheckbox"] {
+    margin: 9px 0 0 0 !important;
+    padding: 0 !important;
+}
+
+div[data-testid="stCheckbox"] input[type="checkbox"] {
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    position: absolute !important;
+    pointer-events: none !important;
+}
+
+div[data-testid="stCheckbox"] > label > div,
+div[data-testid="stCheckbox"] > label > span {
+    display: none !important;
+}
+
+div[data-testid="stCheckbox"] > label {
+    position: relative !important;
+    display: inline-block !important;
+    width: 50px !important;
+    height: 28px !important;
+    margin: 0 !important;
+    cursor: pointer !important;
+    background: none !important;
+    border: none !important;
+    outline: none !important;
+}
+
+div[data-testid="stCheckbox"] > label::before {
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important;
+    background-color: #4a4a4a !important;
+    border: 1px solid #666666 !important;
+    transition: all 0.3s ease !important;
+    border-radius: 20px !important;
+}
+
+div[data-testid="stCheckbox"] > label::after {
+    content: "" !important;
+    position: absolute !important;
+    height: 20px !important;
+    width: 20px !important;
+    border-radius: 50% !important;
+    left: 4px !important;
+    top: 4px !important;
+    background-color: #cccccc !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2) !important;
+}
+
+div[data-testid="stCheckbox"]:has(input:checked) > label::before {
+    background-color: #66b446 !important;
+    border: 1px solid #66b446 !important;
+}
+
+div[data-testid="stCheckbox"]:has(input:checked) > label::after {
+    transform: translateX(22px) !important;
+    background-color: #ffffff !important;
+}
+
+/* Sidebar Buttons - FIXED: No weird padding issues */
+section[data-testid="stSidebar"] .stButton > button,
+div[data-testid="stSidebar"] .stButton > button,
+.css-1d391kg .stButton > button {
+    all: unset !important;
+    background: white !important;
+    color: #222 !important;
+    border-radius: 6px !important;
+    height: 32px !important;
+    padding: 6px 12px !important;
+    margin-bottom: 0.3rem !important;
+    font-weight: 600 !important;
+    font-family: 'Arial', sans-serif !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 100ms ease !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2) !important;
+    font-size: 12px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* REMOVE THE SIDEBAR PADDING ISSUE */
+section[data-testid="stSidebar"] > div:first-child,
+div[data-testid="stSidebar"] > div:first-child {
+    padding-top: 1rem !important;  /* Normal padding - no mega button compensation */
+    overflow: auto !important;     /* Allow scrolling */
+}
+
+section[data-testid="stSidebar"] .stButton > button:hover,
+div[data-testid="stSidebar"] .stButton > button:hover,
+.css-1d391kg .stButton > button:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25) !important;
+    background-color: #f5f5f5 !important;
+}
+
+section[data-testid="stSidebar"] .stButton > button:active,
+div[data-testid="stSidebar"] .stButton > button:active,
+.css-1d391kg .stButton > button:active {
+    scale: 0.98 !important;
+    background: #333 !important;
+    color: white !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3) !important;
+}
+
+section[data-testid="stSidebar"] button[kind="primary"],
+div[data-testid="stSidebar"] button[kind="primary"],
+.css-1d391kg button[kind="primary"] {
+    background: #66b446 !important;
+    color: white !important;
+}
+
+/* ============================================================================
+   8. RESPONSIVE & UTILITIES
+   ============================================================================ */
+
+/* Footer */
+.footer {
+    background: linear-gradient(135deg, #3a3a3a, #484848);
+    border-top: 3px solid #66b446;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 3rem;
+    box-shadow: 0 -6px 20px rgba(0,0,0,0.3);
+}
+
+.footer p {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    font-weight: 500;
+}
+
+.footer strong {
+    color: #4c80c1;
+    font-weight: 700;
+}
+
+.footer-subtitle {
+    font-size: 1rem;
+    color: #66b446;
+    font-style: italic;
+    margin-top: 0.5rem;
+    font-weight: 400;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes modalSlideIn {
+    from { opacity: 0; transform: scale(0.9) translateY(-20px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.2rem;
+    }
+
+    .desk-container {
+        padding: 0.3rem;
+        max-width: 100px;
+    }
+
+    .stTabs [data-baseweb="tab"] {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+        min-width: 100px;
+    }
+
+    .team-news-content {
+        font-size: 1.4rem;
+    }
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.text-primary {
+    color: #4c80c1;
+}
+
+.text-success {
+    color: #66b446;
+}
+
+.text-white {
+    color: #ffffff;
+}

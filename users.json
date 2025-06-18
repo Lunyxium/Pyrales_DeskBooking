@@ -1,0 +1,21 @@
+{
+  "4b1bfdea": {
+    "username": "Matt",
+    "full_name": "Mathias Bäumli",
+    "color": "#96CEB4",
+    "avatar_path": null,
+    "created_date": "2025-06-15T00:34:39.042214",
+    "templates": {
+      "Johannes": {
+        "name": "Johannes",
+        "schedule": {
+          "tuesday": "full_day",
+          "thursday": "full_day"
+        },
+        "created_at": "2025-06-18T03:25:29.419112",
+        "updated_at": "2025-06-18T03:25:29.419127",
+        "version": 1
+      }
+    }
+  }
+}
